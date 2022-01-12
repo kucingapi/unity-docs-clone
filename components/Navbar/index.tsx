@@ -1,4 +1,6 @@
+import { ViewListIcon } from '@heroicons/react/solid';
 import { NavLinkContainer } from './NavLinkContainer';
+import DropdownIcon from './NavLinkContainer/DropdownIcon';
 
 export const Navbar = () => {
   const navLinks = [
@@ -52,7 +54,15 @@ export const Navbar = () => {
 
   return (
     <nav className="px-1 items-center flex justify-between min-w-full py-5 bg-black text-white sticky top-0">
+      <NavLinkContainer 
+        navLinks={navLinks} 
+        horizontal={false} 
+        active={0} 
+      />
       <a href="./" className="flex items-center text-xl gap-2">
+        <ViewListIcon 
+          className='w-6 lg:hidden' 
+        /> 
         <img className="w-4/12" src="/unity_logo.svg" alt="" />
         <h1>Documentation</h1>
       </a>
@@ -61,6 +71,9 @@ export const Navbar = () => {
         horizontal={true} 
         active={0} 
       />
+      <div className='lg:hidden'>
+        <DropdownIcon />
+      </div>
     </nav>
   );
 };

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { NavLinkContainer } from './NavLinkContainer';
 
-
 export const Navbar = () => {
   const navLinks = [
     {

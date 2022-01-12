@@ -1,16 +1,51 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+import { ViewGridIcon } from '@heroicons/react/solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingBasket, faLink, faColumns, faUpload, faUserFriends, faCompass } from '@fortawesome/free-solid-svg-icons'
+
 
 function classNames(...classes:any) {
   return classes.filter(Boolean).join(' ')
 }
+interface MenuItemProps {
+  title: string;
+  icon: any;
+}
+
+const MenuItem = ({title, icon}: MenuItemProps) => (
+  <Menu.Item>
+    {({ active }) => (
+      <div
+          className={classNames(
+            active ? 'text-blue-500 fill-blue-500' : 'text-white',
+            'flex px-4 py-2 text-sm font-medium transition-all ease-out delay-200 items-center gap-2'
+          )}
+      >
+        <FontAwesomeIcon className='h-5' icon={icon} />
+        <a
+          href="#"
+        >
+          {title}
+        </a>
+      </div>
+    )}
+  </Menu.Item>
+)
 
 export default function DropdownIcon() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-          Options
+        <Menu.Button className="inline-flex justify-center w-full rounded-full shadow-sm p-2 bg-black text-sm font-medium hover:bg-gray-900 ">
+          {({open}) => (
+            <ViewGridIcon 
+              className={classNames(
+                open ? 'fill-blue-500 ' : 'fill-white',
+                'w-5'
+              )}
+            />
+          )}
         </Menu.Button>
       </div>
 
@@ -23,62 +58,32 @@ export default function DropdownIcon() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Account settings
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Support
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  License
-                </a>
-              )}
-            </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    type="submit"
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block w-full text-left px-4 py-2 text-sm'
-                    )}
-                  >
-                    Sign out
-                  </button>
-                )}
-              </Menu.Item>
-            </form>
+            <MenuItem 
+              title='Asset Store'
+              icon={faShoppingBasket}
+            />
+            <MenuItem 
+              title='Connect'
+              icon={faLink}
+            />
+            <MenuItem 
+              title='Dashboard'
+              icon={faColumns}
+            />
+            <MenuItem 
+              title='Distribute'
+              icon={faUpload}
+            />
+            <MenuItem 
+              title='Forum'
+              icon={faUserFriends}
+            />
+            <MenuItem 
+              title='Learn'
+              icon={faCompass}
+            />
           </div>
         </Menu.Items>
       </Transition>

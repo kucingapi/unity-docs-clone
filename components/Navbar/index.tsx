@@ -55,7 +55,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="px-1 items-center flex justify-between min-w-full py-5 bg-black text-white">
+    <nav className="px-1 items-center flex justify-between min-w-full py-5 bg-black text-white sticky top-0">
       <a href="./" className="flex items-center text-xl gap-2">
         <img className="w-4/12" src="/unity_logo.svg" alt="" />
         <h1>Documentation</h1>

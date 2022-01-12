@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         href="https://fonts.googleapis.com/css2?family=Inter"
         rel="stylesheet"
       />
+      <title>Unity Documentation</title>
     </Head>
     <Component  {...pageProps} />
   </>

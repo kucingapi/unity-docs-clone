@@ -15,8 +15,12 @@ export const Navbar = () => {
       link: '/learn',
     },
     {
-      title: 'Learning',
-      link: '/learn',
+      title: 'Community',
+      dropdown: [
+        'Blogs',
+        'Forums',
+        'Answers'
+      ]
     },
   ];
 

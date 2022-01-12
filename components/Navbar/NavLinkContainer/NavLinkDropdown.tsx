@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NavLink } from "./NavLink";
 
 interface dropdown{
   title: string;
@@ -12,11 +13,24 @@ interface NavlinkDropdownProps {
 
 export const NavLinkDropdown = ({ dropdown, title }: NavlinkDropdownProps) => {
   return (
-	<a
-		className={ 
-		' hover:text-blue-500 hover:underline transition-all duration-200 ease-out w-11/12 px-2 whitespace-nowrap'
-		}
-	>
-		{title}
-	</a>
+	<div>
+      <div className="group inline-block relative">
+        <button
+          className=' hover:text-blue-500 hover:underline transition-all duration-200 ease-out w-11/12 px-2 whitespace-nowrap'
+
+        >
+          <span className="mr-1">{title}</span>
+        </button>
+        <ul className="absolute hidden pt-1 group-hover:block border-gray-600 border shadow-xl">
+          <li className="">
+            <NavLink
+              className="text-left bg-black  py-2 px-4 pr-10 block whitespace-no-wrap"
+			  title="something"
+			  link="something"
+			/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
 };

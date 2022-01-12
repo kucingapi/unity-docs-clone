@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 interface NavlinkProps {
-  link: string;
   title: string;
+  link: string;
   active: boolean;
-  dropdown?: Array<Object>;
 }
+
 
 export const NavLink = ({ link, title, active }: NavlinkProps) => {
   return (

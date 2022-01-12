@@ -1,4 +1,4 @@
-import { NavLink } from "./NavLink";
+import { NavLink } from './NavLink';
 
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
@@ -11,17 +11,27 @@ export const NavLinkContainer = ({
   horizontal,
   active,
 }: NavlinkContainerProps) => {
-  return (
-    <div className="flex gap-4">
-      {navLinks.map((navLink: any, index) => (
-        <>
-          <NavLink
-            link={navLink.link}
-            title={navLink.title}
-            active={index == active}
-          />
-        </>
-      ))}
-    </div>
-  );
+  if(horizontal)
+    return (
+      <div className="flex gap-4">
+        {navLinks.map((navLink: any, index) => {
+          return (
+            <>
+              <NavLink
+                link={navLink.link}
+                title={navLink.title}
+                active={index == active}
+              />
+            </>
+          );
+        })}
+      </div>
+    );
+  else{
+    return(
+      <div>
+        
+      </div>
+    )
+  }
 };

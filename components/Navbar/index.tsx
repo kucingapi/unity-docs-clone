@@ -26,7 +26,11 @@ export const Navbar = () => {
         <img className="w-4/12" src="/unity_logo.svg" alt="" />
         <h1>Documentation</h1>
       </a>
-      <NavLinkContainer navLinks={navLinks} horizontal={true} active={0} />
+      <NavLinkContainer 
+        navLinks={navLinks} 
+        horizontal={true} 
+        active={0} 
+      />
     </nav>
   );
 };

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+	.navlink-active{
+		@apply text-blue-500
+	}
+}
+
 *{
 	font-family: 'Inter';
 }

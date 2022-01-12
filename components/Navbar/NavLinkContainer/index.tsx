@@ -1,6 +1,6 @@
+import DropdownIcon from './DropdownIcon';
 import { NavLink } from './NavLink';
 import { NavLinkDropdown } from './NavLinkDropdown';
-
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
   horizontal: boolean;
@@ -34,6 +34,7 @@ export const NavLinkContainer = ({
             )
           }
         })}
+        <DropdownIcon/>
       </div>
     );
   else{

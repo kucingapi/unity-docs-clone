@@ -16,10 +16,40 @@ export const Navbar = () => {
     },
     {
       title: 'Community',
-      dropdown: [
-        'Blogs',
-        'Forums',
-        'Answers'
+      dropdowns: [
+        {
+          title:'Blogs',
+          link:'blogs'
+        },
+        {
+          title:'Forums',
+          link:'forums'
+        },
+        {
+          title:'Answers',
+          link:'answer'
+        },
+      ]
+    },
+    {
+      title: 'Support & Services',
+      dropdowns: [
+        {
+          title:'Customer Service',
+          link:'cs'
+        },
+        {
+          title:'Knowladge Base',
+          link:'knowladge'
+        },
+        {
+          title:'Technical Support',
+          link:'ts'
+        },
+        {
+          title:'Consulting Services',
+          link:'consulting'
+        },
       ]
     },
   ];

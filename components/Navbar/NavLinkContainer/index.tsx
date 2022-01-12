@@ -16,7 +16,7 @@ export const NavLinkContainer = ({
     return (
       <div className="flex gap-4">
         {navLinks.map((navLink: any, index) => {
-          if(!navLink.dropdown)
+          if(!navLink.dropdowns){
             return (
               <NavLink
                 link={navLink.link}
@@ -24,11 +24,12 @@ export const NavLinkContainer = ({
                 active={index == active}
               />
             );
+          }
           else{
             return (
               <NavLinkDropdown 
                 title={navLink.title}
-                dropdown={navLink.dropdown}
+                dropdowns={navLink.dropdowns}
               />
             )
           }

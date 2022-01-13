@@ -15,7 +15,7 @@ export const NavLinkContainer = ({
   
   if(horizontal)
     return (
-      <div className="flex gap-4 xs:hidden sm:hidden lg:flex">
+      <div className="flex gap-4 xs:hidden sm:hidden lg:flex items-center">
         {navLinks.map((navLink: any, index) => {
           if(!navLink.dropdowns){
             return (
@@ -40,8 +40,7 @@ export const NavLinkContainer = ({
     );
   else{
     return(
-      <div className='absolute h-screen bg-black'>
-
+      <div className='absolute h-screen w-5/12 bg-black opacity-90 top-0 left-0'>
       </div>
     )
   }

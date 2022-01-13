@@ -3,6 +3,7 @@ import { Menu, Transition } from '@headlessui/react';
 import { ViewGridIcon } from '@heroicons/react/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBasket, faLink, faColumns, faUpload, faUserFriends, faCompass } from '@fortawesome/free-solid-svg-icons'
+import Grid from '../../../public/grid.svg'
 
 
 function classNames(...classes:any) {
@@ -39,7 +40,7 @@ export default function DropdownIcon() {
       <div>
         <Menu.Button className="inline-flex justify-center w-full rounded-full shadow-sm p-2 bg-black text-sm font-medium hover:bg-gray-900 ">
           {({open}) => (
-            <ViewGridIcon 
+            <Grid 
               className={classNames(
                 open ? 'fill-blue-500 ' : 'fill-white',
                 'w-5'

@@ -1,3 +1,4 @@
+import { Transition } from '@headlessui/react';
 import DropdownIcon from './DropdownIcon';
 import { NavLink } from './NavLink';
 import { NavLinkDropdown } from './NavLinkDropdown';
@@ -40,8 +41,17 @@ export const NavLinkContainer = ({
     );
   else{
     return(
-      <div className='absolute h-screen w-5/12 bg-black opacity-90 top-20 left-0'>
-      </div>
+      <Transition 
+        show={true}
+        enter="transition-translate-x duration-300"
+        enterFrom="-translate-x-full"
+        enterTo="translate-x-0"
+        leave="transition-translate-x duration-300"
+        leaveFrom="translate-x-0"
+        leaveTo="-translate-x-full"
+        className=' absolute h-screen w-5/12 bg-black opacity-90 top-20 left-0'
+        >
+      </Transition>
     )
   }
 };

@@ -8,7 +8,7 @@ interface NavlinkContainerProps {
   navLinks: Array<Object>;
   horizontal: boolean;
   active: number;
-  sidebar?: boolean;
+  sidebar?: number;
 }
 
 export const NavLinkContainer = ({
@@ -17,7 +17,6 @@ export const NavLinkContainer = ({
   active,
   sidebar
 }: NavlinkContainerProps) => {
-  
   if(horizontal)
     return (
       <div className="flex gap-4 xs:hidden sm:hidden lg:flex items-center">
@@ -44,10 +43,12 @@ export const NavLinkContainer = ({
       </div>
     );
   else{
+    const defaultSidebar = 0;
     return(
       <>
           <SidebarSlide
-            active={sidebar}
+            number={sidebar}
+            id={defaultSidebar}
           >
             {navLinks.map((navLink: any, index) => {
               if(!navLink.dropdowns){
@@ -69,7 +70,7 @@ export const NavLinkContainer = ({
             })}
           </SidebarSlide>
         <Transition
-          show={sidebar}
+          show={sidebar == defaultSidebar }
           className='flex flex-col absolute gap-3 h-screen w-7/12 bg-black opacity-40 top-20 right-0 p-1 px-3'
         />
 

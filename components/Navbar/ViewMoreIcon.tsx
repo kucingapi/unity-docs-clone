@@ -11,7 +11,12 @@ const Line = ({className} : LineProps) => (
 	<div className={"w-6 relative rounded-lg bg-white h-[3px] transition-all delay-100 "  + className}></div>
 )
 export const ViewMoreIcon = ({active, onChange}: ViewMoreIconProps) => (
-	<div onClick={onChange} className={("flex flex-col gap-1 w-6 mr-5 transition-all delay-300 lg:hidden ") + (active && "hover:rotate-180 ease-in-out" )}>
+	<div onClick={() => {
+		if(active)
+			onChange(-1)
+		else
+			onChange(0)
+	}} className={("flex flex-col gap-1 w-6 transition-all delay-300 lg:hidden ") + (active && "hover:rotate-180 ease-in-out" )}>
 		<Line 
 			className={active && "rotate-45 translate-y-full"}
 		/>	

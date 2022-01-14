@@ -1,13 +1,17 @@
 import { Transition } from "@headlessui/react";
 
 interface SidebarSideProps {
-  active?: boolean;
+  number?: number;
   children: any;
+  id: number;
 }
 
-export const SidebarSlide = ({active,children}: SidebarSideProps) => (
+export const SidebarSlide = ({id,number,children}: SidebarSideProps) =>{ 
+	console.log(number, id);
+	
+	return (
 	<Transition
-		show={active}
+		show={number == id}
 		enter="transition-translate-x duration-300"
 		enterFrom="-translate-x-full"
 		enterTo="translate-x-0"
@@ -19,3 +23,4 @@ export const SidebarSlide = ({active,children}: SidebarSideProps) => (
 		{children}
 	</Transition>
 )
+}

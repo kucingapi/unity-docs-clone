@@ -5,10 +5,11 @@ import DropdownIcon from './NavLinkContainer/DropdownIcon';
 import { ViewMoreIcon } from './ViewMoreIcon';
 
 export const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false)
-  const sidebarHandler = () => {
-    setSidebar(!sidebar)
+  const [sidebar, setSidebar] = useState(-1)
+  const sidebarHandler = (number: number) => {
+    setSidebar(number)
   }
+  const defaultSidebar = 0;
   const navLinks = [
     {
       title: 'Docs Home',
@@ -69,10 +70,10 @@ export const Navbar = () => {
         />
         <div className="flex items-center text-xl gap-2">
           <ViewMoreIcon
-            active={sidebar}
+            active={sidebar == defaultSidebar}
             onChange={sidebarHandler}
           />
-          <img className="w-4/12" src="/unity_logo.svg" alt="" />
+          <img className="ml-5 w-4/12" src="/unity_logo.svg" alt="" />
           <h1>Documentation</h1>
         </div>
         <NavLinkContainer

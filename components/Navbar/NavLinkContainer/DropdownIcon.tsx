@@ -1,9 +1,13 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { ViewGridIcon } from '@heroicons/react/solid'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingBasket, faLink, faColumns, faUpload, faUserFriends, faCompass } from '@fortawesome/free-solid-svg-icons'
-import Grid from '../../../public/grid.svg'
+import Grid from '../../../public/grid.svg';
+import Compass from '../../../public/compass.svg';
+import FileUpload from '../../../public/fileupload.svg';
+import Template from '../../../public/template.svg';
+import People from '../../../public/people.svg';
+import Connect from '../../../public/connect.svg';
+import Shop from '../../../public/shop.svg';
+
 
 
 function classNames(...classes:any) {
@@ -11,19 +15,19 @@ function classNames(...classes:any) {
 }
 interface MenuItemProps {
   title: string;
-  icon: any;
+  children: any;
 }
 
-const MenuItem = ({title, icon}: MenuItemProps) => (
+const MenuItem = ({title, children }: MenuItemProps) => (
   <Menu.Item>
     {({ active }) => (
       <div
           className={classNames(
-            active ? 'text-secondary fill-secondary' : 'text-white',
+            active ? 'text-secondary fill-secondary' : 'text-white fill-white',
             'flex px-4 py-2 text-sm font-medium transition-all ease-out delay-200 items-center gap-2'
           )}
       >
-        <FontAwesomeIcon className='h-5' icon={icon} />
+        <span className="w-6 flex items-center justify-center">{children}</span>
         <a
           href="#"
         >
@@ -58,33 +62,43 @@ export default function DropdownIcon() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-52 shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-            <MenuItem 
-              title='Asset Store'
-              icon={faShoppingBasket}
+        <Menu.Items className="py-3 origin-top-right flex flex-col gap-4 absolute right-0 mt-2 w-52 shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <MenuItem
+            title='Asset Store'
+          >
+            <Shop 
             />
-            <MenuItem 
-              title='Connect'
-              icon={faLink}
+          </MenuItem>
+          <MenuItem 
+            title='Connect'
+          >
+            <Connect 
             />
-            <MenuItem 
-              title='Dashboard'
-              icon={faColumns}
+          </MenuItem>
+          <MenuItem 
+            title='Dashboard'
+          >
+            <Template 
             />
-            <MenuItem 
-              title='Distribute'
-              icon={faUpload}
+          </MenuItem>
+          <MenuItem 
+            title='Distribute'
+          >
+            <FileUpload 
             />
-            <MenuItem 
-              title='Forum'
-              icon={faUserFriends}
+          </MenuItem>
+          <MenuItem 
+            title='Forum'
+          >
+            <People 
             />
-            <MenuItem 
-              title='Learn'
-              icon={faCompass}
+          </MenuItem>
+          <MenuItem 
+            title='Learn'
+          >
+            <Compass 
             />
-          </div>
+          </MenuItem>
         </Menu.Items>
       </Transition>
     </Menu>

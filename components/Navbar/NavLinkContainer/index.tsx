@@ -1,5 +1,6 @@
 import { Transition } from '@headlessui/react';
 import { ButtonLink } from './ButtonLink';
+import { ButtonLinkDropdown } from './ButtonLinkDropdown';
 import DropdownIcon from './DropdownIcon';
 import { NavLink } from './NavLink';
 import { NavLinkDropdown } from './NavLinkDropdown';
@@ -61,7 +62,7 @@ export const NavLinkContainer = ({
               }
               else{
                 return (
-                  <ButtonLink
+                  <ButtonLinkDropdown
                     link={navLink.link}
                     title={navLink.title}
                   />

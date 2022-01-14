@@ -14,7 +14,7 @@ export const NavLink = ({ link, title, active, className}: NavlinkProps) => {
       <a
         className={
           (active && 'navlink-active') +
-          ' hover:text-blue-500 hover:underline transition-all duration-200 ease-out px-2 whitespace-nowrap py-1 ' +
+          ' hover:text-secondary hover:underline transition-all duration-200 ease-out px-2 whitespace-nowrap py-1 ' +
           (!!className && className)
         }
       >

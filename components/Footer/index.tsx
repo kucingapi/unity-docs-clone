@@ -1,7 +1,7 @@
 
 export const Footer = () => {
 	return (
-    <div className=" xs:flex-col lg:flex-row gap-5 px-5 items-start flex text-sm justify-between min-w-full pt-9 pb-16 bg-black text-white sticky top-0">
+    <div className=" xs:flex-col lg:flex-row gap-5 px-5 items-start flex text-sm justify-between min-w-full pt-9 pb-16 bg-black text-white ">
       <a href="./" className="lg:w-3/12 flex items-center text-l gap-2 text-gray-300 font-semibold">
         <img className="xs:w-4/12 lg:w-3/12" src="/unity_logo.svg" alt="" />
         <h1 className="text-base">Documentation</h1>

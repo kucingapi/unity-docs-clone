@@ -42,8 +42,7 @@ export default function DropdownIcon() {
           {({open}) => (
             <Grid 
               className={classNames(
-                open ? 'fill-blue-500 ' : 'fill-white',
-                'w-5'
+                open ? 'fill-blue-500 ' : 'fill-white'
               )}
             />
           )}

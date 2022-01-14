@@ -40,7 +40,7 @@ export const NavLinkContainer = ({
     );
   else{
     return(
-      <div className='absolute h-screen w-5/12 bg-black opacity-90 top-0 left-0'>
+      <div className='absolute h-screen w-5/12 bg-black opacity-90 top-20 left-0'>
       </div>
     )
   }

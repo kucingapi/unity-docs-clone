@@ -8,7 +8,7 @@ module.exports = {
       screens: {
         'xs': {min:'0px', max:'640px'},
         'lg': '1002px',
-        // => @media (min-width: 992px) { ... }
+        'xl': '1260px',
       },
       colors: {
         secondary: '#2196f3',

@@ -60,7 +60,7 @@ export const Navbar = () => {
 
   return (
     <div className='bg-black sticky top-0'>
-      <nav className="px-1 items-center flex justify-between w-full py-5 text-white lg:max-w-6xl m-auto">
+      <nav className="px-1 items-center flex justify-between w-full py-5 text-white xl:max-w-6xl m-auto">
         <NavLinkContainer
           navLinks={navLinks}
           horizontal={false}

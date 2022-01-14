@@ -7,10 +7,11 @@ interface dropdown {
 }
 interface NavlinkDropdownProps {
   title: string;
-  dropdowns: Array<dropdown>;
+  className?: string;
+  dropdowns: dropdown[];
 }
 
-export const NavLinkDropdown = ({ dropdowns, title }: NavlinkDropdownProps) => {
+export const NavLinkDropdown = ({ dropdowns, title, className }: NavlinkDropdownProps) => {
   return (
     <div>
       <div className="group inline-block relative">

@@ -1,8 +1,14 @@
 import { ViewListIcon } from '@heroicons/react/solid';
+import { useState } from 'react';
 import { NavLinkContainer } from './NavLinkContainer';
 import DropdownIcon from './NavLinkContainer/DropdownIcon';
+import { ViewMoreIcon } from './ViewMoreIcon';
 
 export const Navbar = () => {
+  const [sidebar, setSidebar] = useState(false)
+  const sidebarHandler = () => {
+    setSidebar(!sidebar)
+  }
   const navLinks = [
     {
       title: 'Docs Home',
@@ -59,14 +65,16 @@ export const Navbar = () => {
           navLinks={navLinks}
           horizontal={false}
           active={0}
+          sidebar={sidebar}
         />
-        <a href="./" className="flex items-center text-xl gap-2">
-          <ViewListIcon
-            className='w-6 lg:hidden'
+        <div className="flex items-center text-xl gap-2">
+          <ViewMoreIcon
+            active={sidebar}
+            onChange={sidebarHandler}
           />
           <img className="w-4/12" src="/unity_logo.svg" alt="" />
           <h1>Documentation</h1>
-        </a>
+        </div>
         <NavLinkContainer
           navLinks={navLinks}
           horizontal={true}

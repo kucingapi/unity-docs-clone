@@ -3,6 +3,7 @@ import { ButtonLink } from './ButtonLink';
 import DropdownIcon from './DropdownIcon';
 import { NavLink } from './NavLink';
 import { NavLinkDropdown } from './NavLinkDropdown';
+import { SidebarSlide } from './SidebarSlide';
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
   horizontal: boolean;
@@ -45,35 +46,28 @@ export const NavLinkContainer = ({
   else{
     return(
       <>
-        <Transition
-          show={sidebar}
-          enter="transition-translate-x duration-300"
-          enterFrom="-translate-x-full"
-          enterTo="translate-x-0"
-          leave="transition-translate-x duration-300"
-          leaveFrom="translate-x-0"
-          leaveTo="-translate-x-full"
-          className='flex flex-col absolute gap-3 h-screen w-5/12 bg-black opacity-90 top-20 left-0 p-1 px-3'
-        >
-          {navLinks.map((navLink: any, index) => {
-            if(!navLink.dropdowns){
-              return (
-                <ButtonLink
-                  link={navLink.link}
-                  title={navLink.title}
-                />
-              );
-            }
-            else{
-              return (
-                <ButtonLink
-                  link={navLink.link}
-                  title={navLink.title}
-                />
-              )
-            }
-          })}
-        </Transition>
+          <SidebarSlide
+            active={sidebar}
+          >
+            {navLinks.map((navLink: any, index) => {
+              if(!navLink.dropdowns){
+                return (
+                  <ButtonLink
+                    link={navLink.link}
+                    title={navLink.title}
+                  />
+                );
+              }
+              else{
+                return (
+                  <ButtonLink
+                    link={navLink.link}
+                    title={navLink.title}
+                  />
+                )
+              }
+            })}
+          </SidebarSlide>
         <Transition
           show={sidebar}
           className='flex flex-col absolute gap-3 h-screen w-7/12 bg-black opacity-40 top-20 right-0 p-1 px-3'

@@ -1,22 +1,24 @@
 import { Transition } from '@headlessui/react';
-import { ButtonLink } from './ButtonLink';
-import { ButtonLinkDropdown } from './ButtonLinkDropdown';
+import { ButtonLink } from './Vertical/ButtonLink';
+import { ButtonLinkDropdown } from './Vertical/ButtonLinkDropdown';
 import DropdownIcon from './DropdownIcon';
-import { NavLink } from './NavLink';
-import { NavLinkDropdown } from './NavLinkDropdown';
-import { SidebarSlide } from './SidebarSlide';
+import { NavLink } from './Horizontal/NavLink';
+import { NavLinkDropdown } from './Horizontal/NavLinkDropdown';
+import { SidebarSlide } from './Vertical/SidebarSlide';
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
   horizontal: boolean;
   active: number;
   sidebar?: number;
+  sidebarHandler?: any;
 }
 
 export const NavLinkContainer = ({
   navLinks,
   horizontal,
   active,
-  sidebar
+  sidebar,
+  sidebarHandler
 }: NavlinkContainerProps) => {
   if(horizontal)
     return (
@@ -65,6 +67,8 @@ export const NavLinkContainer = ({
                   <ButtonLinkDropdown
                     link={navLink.link}
                     title={navLink.title}
+                    id={index + 1}
+                    sidebarHandler={sidebarHandler} 
                   />
                 )
               }

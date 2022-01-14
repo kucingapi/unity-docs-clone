@@ -67,6 +67,7 @@ export const Navbar = () => {
           horizontal={false}
           active={0}
           sidebar={sidebar}
+          sidebarHandler={sidebarHandler}
         />
         <div className="flex items-center text-xl gap-2">
           <ViewMoreIcon

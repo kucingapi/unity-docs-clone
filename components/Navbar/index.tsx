@@ -53,27 +53,29 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="px-1 items-center flex justify-between min-w-full py-5 bg-black text-white sticky top-0">
-      <NavLinkContainer 
-        navLinks={navLinks} 
-        horizontal={false} 
-        active={0} 
-      />
-      <a href="./" className="flex items-center text-xl gap-2">
-        <ViewListIcon 
-          className='w-6 lg:hidden' 
-        /> 
-        <img className="w-4/12" src="/unity_logo.svg" alt="" />
-        <h1>Documentation</h1>
-      </a>
-      <NavLinkContainer 
-        navLinks={navLinks} 
-        horizontal={true} 
-        active={0} 
-      />
-      <div className='lg:hidden'>
-        <DropdownIcon />
-      </div>
-    </nav>
+    <div className='bg-black sticky top-0'>
+      <nav className="px-1 items-center flex justify-between w-full py-5 text-white lg:max-w-6xl m-auto">
+        <NavLinkContainer
+          navLinks={navLinks}
+          horizontal={false}
+          active={0}
+        />
+        <a href="./" className="flex items-center text-xl gap-2">
+          <ViewListIcon
+            className='w-6 lg:hidden'
+          />
+          <img className="w-4/12" src="/unity_logo.svg" alt="" />
+          <h1>Documentation</h1>
+        </a>
+        <NavLinkContainer
+          navLinks={navLinks}
+          horizontal={true}
+          active={0}
+        />
+        <div className='lg:hidden'>
+          <DropdownIcon />
+        </div>
+      </nav>
+    </div>
   );
 };

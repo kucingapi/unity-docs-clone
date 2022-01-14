@@ -19,7 +19,7 @@ const MenuItem = ({title, icon}: MenuItemProps) => (
     {({ active }) => (
       <div
           className={classNames(
-            active ? 'text-blue-500 fill-blue-500' : 'text-white',
+            active ? 'text-secondary fill-secondary' : 'text-white',
             'flex px-4 py-2 text-sm font-medium transition-all ease-out delay-200 items-center gap-2'
           )}
       >
@@ -38,11 +38,11 @@ export default function DropdownIcon() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-full shadow-sm p-2 bg-black text-sm font-medium hover:bg-gray-900 ">
+        <Menu.Button className="inline-flex justify-center w-full rounded-full shadow-sm p-2 bg-black text-sm font-normal hover:bg-gray-900 ">
           {({open}) => (
             <Grid 
               className={classNames(
-                open ? 'fill-blue-500 ' : 'fill-white'
+                open ? 'fill-secondary ' : 'fill-white'
               )}
             />
           )}
@@ -58,7 +58,7 @@ export default function DropdownIcon() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-52 shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             <MenuItem 
               title='Asset Store'

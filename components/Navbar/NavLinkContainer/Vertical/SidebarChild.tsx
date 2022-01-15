@@ -28,10 +28,11 @@ export const SidebarChild = ({id, title, sidebar, dropdowns, sidebarHandler}: Si
       </div>
     </div>
     <div>
-      {dropdowns.map(({title, link})=>(
+      {dropdowns.map(({title, link}, index)=>(
         <ButtonLink 
           title={title}
           link={link}
+          key={index}
         />
       ))}
     </div>

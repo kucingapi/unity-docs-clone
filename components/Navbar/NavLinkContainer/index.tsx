@@ -30,6 +30,7 @@ export const NavLinkContainer = ({
                 link={navLink.link}
                 title={navLink.title}
                 active={index == active}
+                key={index}
               />
             );
           }
@@ -38,6 +39,7 @@ export const NavLinkContainer = ({
               <NavLinkDropdown 
                 title={navLink.title}
                 dropdowns={navLink.dropdowns}
+                key={index}
               />
             )
           }
@@ -65,6 +67,7 @@ export const NavLinkContainer = ({
                   <ButtonLink
                     link={navLink.link}
                     title={navLink.title}
+                    key={index}
                   />
                 );
               }
@@ -77,6 +80,7 @@ export const NavLinkContainer = ({
                     sidebarHandler={sidebarHandler} 
                     dropdowns={navLink.dropdowns}
                     sidebar={sidebar}
+                    key={index}
                   />
                 )
               }

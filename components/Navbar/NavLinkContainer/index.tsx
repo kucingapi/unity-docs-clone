@@ -86,7 +86,6 @@ export const NavLinkContainer = ({
           show={sidebar == defaultSidebar }
           className='flex flex-col absolute gap-3 h-screen w-7/12 bg-black opacity-40 top-20 right-0 p-1 px-3'
         />
-
       </>
     )
   }

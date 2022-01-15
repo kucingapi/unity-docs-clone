@@ -15,7 +15,6 @@ interface ButtonLinkDropdownProps{
 }
   
 export const ButtonLinkDropdown = ({ title, link, className, id, sidebarHandler, dropdowns, sidebar }: ButtonLinkDropdownProps) => {
-  console.log('test');
   
   return (
     <>

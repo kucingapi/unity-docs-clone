@@ -16,7 +16,7 @@ export const SidebarSlide = ({id,number,children}: SidebarSideProps) =>{
 		leave="transition-translate-x duration-300"
 		leaveFrom="translate-x-0"
 		leaveTo="-translate-x-full"
-		className='flex flex-col absolute gap-3 h-screen w-full bg-black left-0 top-0'
+		className='flex flex-col absolute gap-3 h-screen w-full bg-black left-0 top-0 px-8'
 	>
 		{children}
 	</Transition>

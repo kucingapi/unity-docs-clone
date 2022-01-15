@@ -28,6 +28,7 @@ export const ButtonLinkDropdown = ({ title, link, className, id, sidebarHandler,
       <SidebarChild
         title={title}
         link='test'
+        dropdowns={dropdowns}
         sidebar={sidebar}
         id={id}
       />

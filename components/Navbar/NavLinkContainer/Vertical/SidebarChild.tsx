@@ -1,5 +1,6 @@
 import { SidebarSlide } from "./SidebarSlide";
 import ArrowBack from "../../../../public/arrow_back.svg"
+import { ButtonLink } from "./ButtonLink";
 
 interface dropdown {
   title: string;
@@ -10,10 +11,11 @@ interface SidebarChildProps{
 	id: number;
 	title: string;
 	link: string;
-  sidebar?: number
+  sidebar?: number;
+  dropdowns: dropdown[];
 }
 
-export const SidebarChild = ({id, title, link, sidebar}: SidebarChildProps) => (
+export const SidebarChild = ({id, title, sidebar, dropdowns}: SidebarChildProps) => (
   <SidebarSlide
     number={sidebar}
     id={id}
@@ -23,6 +25,14 @@ export const SidebarChild = ({id, title, link, sidebar}: SidebarChildProps) => (
         <ArrowBack />
         <div>{title}</div>
       </div>
+    </div>
+    <div>
+      {dropdowns.map(({title, link})=>(
+        <ButtonLink 
+          title={title}
+          link={link}
+        />
+      ))}
     </div>
   </SidebarSlide>
 

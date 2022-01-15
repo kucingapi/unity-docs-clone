@@ -71,7 +71,7 @@ export const Navbar = () => {
         />
         <div className="flex items-center text-xl gap-2">
           <ViewMoreIcon
-            active={sidebar == defaultSidebar}
+            active={sidebar != -1}
             onChange={sidebarHandler}
           />
           <img className="ml-5 w-4/12" src="/unity_logo.svg" alt="" />

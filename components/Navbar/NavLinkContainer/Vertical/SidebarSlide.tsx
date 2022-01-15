@@ -7,8 +7,6 @@ interface SidebarSideProps {
 }
 
 export const SidebarSlide = ({id,number,children}: SidebarSideProps) =>{ 
-	console.log(number, id);
-	
 	return (
 	<Transition
 		show={number == id}

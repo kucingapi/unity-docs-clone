@@ -69,6 +69,8 @@ export const NavLinkContainer = ({
                     title={navLink.title}
                     id={index + 1}
                     sidebarHandler={sidebarHandler} 
+                    dropdowns={navLink.dropdowns}
+                    sidebar={sidebar}
                   />
                 )
               }

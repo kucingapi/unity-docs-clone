@@ -1,7 +1,7 @@
 
 export const Footer = () => {
 	return (
-    <div className="md:justify-start xs:flex-col md:flex-col lg:flex-row gap-5 px-11 items-start flex text-sm justify-between min-w-full pt-9 h-64 bg-black text-white ">
+    <div className="md:justify-start xs:flex-col sm:flex-col lg:flex-row gap-5 px-11 items-start flex text-sm justify-between min-w-full pt-9 pb-44 bg-black text-white ">
       <a href="./" className="flex items-center text-l gap-2 text-gray-300 font-semibold">
         <img className="h-[30px]" src="/unity_logo.svg" alt="" />
         <h1 className="text-base">Documentation</h1>

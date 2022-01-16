@@ -73,8 +73,10 @@ export const Navbar = () => {
             active={sidebar != -1}
             onChange={sidebarHandler}
           />
-          <img className="ml-5 w-4/12" src="/unity_logo.svg" alt="" />
-          <h1>Documentation</h1>
+          <a href="." className='flex gap-3 items-center'>
+            <img className="ml-5 w-4/12" src="/unity_logo.svg" alt="" />
+            <h1>Documentation</h1>
+          </a>
         </div>
         <NavLinkContainerHorizontal
           navLinks={navLinks}

@@ -7,18 +7,12 @@ import { NavLinkDropdown } from './NavLinkDropdown';
 import { SidebarSlide } from '../Vertical/SidebarSlide';
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
-  horizontal: boolean;
   active: number;
-  sidebar?: number;
-  sidebarHandler?: any;
 }
 
 export const NavLinkContainerHorizontal = ({
   navLinks,
-  horizontal,
   active,
-  sidebar,
-  sidebarHandler
 }: NavlinkContainerProps) => {
   return (
     <div className="flex gap-4 xs:hidden sm:hidden lg:flex items-center">

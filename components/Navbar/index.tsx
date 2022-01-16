@@ -78,8 +78,8 @@ export const Navbar = () => {
         </div>
         <NavLinkContainerHorizontal
           navLinks={navLinks}
-          horizontal={true}
           active={0}
+          
         />
         <div className='lg:hidden'>
           <DropdownIcon />

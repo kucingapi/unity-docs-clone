@@ -13,7 +13,6 @@ export const NavLinkContainerVertical = ({
   sidebar,
   sidebarHandler
 }: NavlinkContainerProps) => {
-    const defaultSidebar = 0;
 return(
 	<>
 		<Transition

@@ -59,7 +59,7 @@ export const NavLinkContainer = ({
             leave="transition-translate-x duration-300"
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
-            className='flex flex-col absolute gap-3 h-screen w-5/12 bg-black opacity-90 top-20 left-0 p-1 px-3'
+            className='flex z-10 flex-col absolute gap-3 h-screen w-96 bg-black opacity-90 top-20 left-0 p-1 px-3'
           >
             {navLinks.map((navLink: any, index) => {
               if(!navLink.dropdowns){
@@ -87,8 +87,8 @@ export const NavLinkContainer = ({
             })}
           </Transition>
         <Transition
-          show={sidebar == defaultSidebar }
-          className='flex flex-col absolute gap-3 h-screen w-7/12 bg-black opacity-40 top-20 right-0 p-1 px-3'
+          show={sidebar != -1 }
+          className='flex flex-col absolute gap-3 h-screen w-full z-0 bg-black opacity-40 top-20 right-0 p-1 px-3'
         />
       </>
     )

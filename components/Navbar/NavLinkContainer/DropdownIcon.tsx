@@ -62,7 +62,7 @@ export default function DropdownIcon() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="py-3 origin-top-right flex flex-col gap-4 absolute right-0 mt-2 w-52 shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="md:w-52 xs:w-screen sm:w-screen py-3 origin-top-right translate-y-3 translate-x-1 flex flex-col gap-4 absolute right-0 mt-2 shadow-lg bg-black border-gray-600 border ring-1 ring-black ring-opacity-5 focus:outline-none">
           <MenuItem
             title='Asset Store'
           >

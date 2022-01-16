@@ -1,7 +1,8 @@
 import { ViewListIcon } from '@heroicons/react/solid';
 import { useState } from 'react';
-import { NavLinkContainer } from './NavLinkContainer';
-import DropdownIcon from './NavLinkContainer/DropdownIcon';
+import { NavLinkContainerHorizontal } from './NavLinkContainer/Horizontal';
+import DropdownIcon from './NavLinkContainer/Horizontal/DropdownIcon';
+import { NavLinkContainerVertical } from './NavLinkContainer/Vertical';
 import { ViewMoreIcon } from './ViewMoreIcon';
 
 export const Navbar = () => {
@@ -62,10 +63,8 @@ export const Navbar = () => {
   return (
     <div className='bg-black sticky top-0'>
       <nav className="px-1 items-center flex justify-between w-full py-5 text-white xl:max-w-6xl m-auto">
-        <NavLinkContainer
+        <NavLinkContainerVertical
           navLinks={navLinks}
-          horizontal={false}
-          active={0}
           sidebar={sidebar}
           sidebarHandler={sidebarHandler}
         />
@@ -77,7 +76,7 @@ export const Navbar = () => {
           <img className="ml-5 w-4/12" src="/unity_logo.svg" alt="" />
           <h1>Documentation</h1>
         </div>
-        <NavLinkContainer
+        <NavLinkContainerHorizontal
           navLinks={navLinks}
           horizontal={true}
           active={0}

@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import Grid from '../../../public/grid.svg';
-import Compass from '../../../public/compass.svg';
-import FileUpload from '../../../public/fileupload.svg';
-import Template from '../../../public/template.svg';
-import People from '../../../public/people.svg';
-import Connect from '../../../public/connect.svg';
-import Shop from '../../../public/shop.svg';
+import Grid from '../../../../public/grid.svg';
+import Compass from '../../../../public/compass.svg';
+import FileUpload from '../../../../public/fileupload.svg';
+import Template from '../../../../public/template.svg';
+import People from '../../../../public/people.svg';
+import Connect from '../../../../public/connect.svg';
+import Shop from '../../../../public/shop.svg';
 
 
 

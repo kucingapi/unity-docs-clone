@@ -26,6 +26,7 @@ export const NavLinkDropdown = ({ dropdowns, title, className }: NavlinkDropdown
                   className="text-left bg-black w-full pt-3 pb-3 px-4 pr-10 block whitespace-no-wrap text-sm"
                   title={title}
                   link={link}
+                  key={index}
                 />
               )
             })}

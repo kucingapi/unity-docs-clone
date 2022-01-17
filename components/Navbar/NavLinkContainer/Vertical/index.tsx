@@ -1,9 +1,11 @@
 import { Transition } from '@headlessui/react';
+import { log } from 'console';
 import { useContext } from 'react';
 import {
   SidebarContext,
   SidebarProvider,
 } from '../../../../contexts/navbarContext/sidebarContext';
+import { sidebarState } from '../../../../functions/sidebarReducer/sidebarReducer';
 import { ButtonLink } from './ButtonLink';
 import { ButtonLinkDropdown } from './ButtonLinkDropdown';
 
@@ -22,7 +24,7 @@ export const NavLinkContainerVertical = ({
   return (
     <>
       <Transition
-        show={sidebar != -1}
+        show={sidebarContext != sidebarState.NONACTIVE}
         enter="transition-translate-x duration-300"
         enterFrom="-translate-x-full"
         enterTo="translate-x-0"

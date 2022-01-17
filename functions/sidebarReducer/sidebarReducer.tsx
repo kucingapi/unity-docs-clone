@@ -19,7 +19,7 @@ function sidebarReducer(state: any, action: action) {
     case 'main':
       return { slide: sidebarState.MAINSLIDE };
     case 'change':
-      return { count: action.value };
+      return { slide: action.value };
     default:
       throw new Error();
   }

@@ -34,7 +34,7 @@ export const ButtonLinkDropdown = ({
     <>
       <div
         onClick={() => {
-          sidebarHandler(id);
+          action({type: 'change', value: id})
         }}
         className={
           'cursor-pointer w-full flex justify-between items-center text-sm text-white p-3 ' +

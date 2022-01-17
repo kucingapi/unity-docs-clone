@@ -13,9 +13,7 @@ interface ButtonLinkDropdownProps {
   link: string;
   className?: string;
   id: number;
-  sidebarHandler?: any;
   dropdowns: dropdown[];
-  sidebar?: number;
 }
 
 export const ButtonLinkDropdown = ({
@@ -23,9 +21,7 @@ export const ButtonLinkDropdown = ({
   link,
   className,
   id,
-  sidebarHandler,
   dropdowns,
-  sidebar,
 }: ButtonLinkDropdownProps) => {
   const { action, slide } = useContext(SidebarContext);
   const { NONACTIVE } = sidebarState;
@@ -46,11 +42,8 @@ export const ButtonLinkDropdown = ({
       </div>
       <SidebarChild
         title={title}
-        link="test"
         dropdowns={dropdowns}
-        sidebar={sidebar}
         id={id}
-        sidebarHandler={sidebarHandler}
       />
     </>
   );

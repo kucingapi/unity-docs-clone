@@ -11,14 +11,10 @@ import { ButtonLinkDropdown } from './ButtonLinkDropdown';
 
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
-  sidebar: number;
-  sidebarHandler: any;
 }
 
 export const NavLinkContainerVertical = ({
   navLinks,
-  sidebar,
-  sidebarHandler,
 }: NavlinkContainerProps) => {
   const sidebarContext = useContext(SidebarContext);
   const {slide} = useContext(SidebarContext);
@@ -51,9 +47,7 @@ export const NavLinkContainerVertical = ({
                 link={navLink.link}
                 title={navLink.title}
                 id={index + 1}
-                sidebarHandler={sidebarHandler}
                 dropdowns={navLink.dropdowns}
-                sidebar={sidebar}
                 key={index}
               />
             );

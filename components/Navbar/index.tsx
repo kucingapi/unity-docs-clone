@@ -65,8 +65,6 @@ export const Navbar = () => {
         <nav className="px-1 items-center flex justify-between w-full py-5 text-white xl:max-w-6xl m-auto">
           <NavLinkContainerVertical
             navLinks={navLinks}
-            sidebar={sidebar}
-            sidebarHandler={sidebarHandler}
           />
           <div className="flex items-center text-xl gap-2">
             <ViewMoreIcon />

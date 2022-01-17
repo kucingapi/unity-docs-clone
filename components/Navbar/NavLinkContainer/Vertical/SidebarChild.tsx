@@ -13,18 +13,13 @@ interface dropdown {
 interface SidebarChildProps {
   id: number;
   title: string;
-  link: string;
-  sidebarHandler?: any;
-  sidebar?: number;
   dropdowns: dropdown[];
 }
 
 export const SidebarChild = ({
   id,
   title,
-  sidebar,
   dropdowns,
-  sidebarHandler,
 }: SidebarChildProps) => {
   const { action, slide } = useContext(SidebarContext);
 

@@ -10,7 +10,7 @@ const sidebarState = {
   MAINSLIDE:0
 }
 
-const initialState = {slide: 0};
+const initialState = {slide: sidebarState.NONACTIVE};
 
 function sidebarReducer(state: any, action: action) {
   switch (action.type) {

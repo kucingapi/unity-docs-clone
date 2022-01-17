@@ -1,7 +1,7 @@
-interface ViewMoreIconProps {
-  active: Boolean;
-  onChange: any;
-}
+import { useContext } from "react";
+import { SidebarContext } from "../../contexts/navbarContext/sidebarContext";
+import { sidebarState } from "../../functions/sidebarReducer/sidebarReducer";
+
 interface LineProps {
   className?: String;
 }
@@ -14,21 +14,25 @@ const Line = ({ className }: LineProps) => (
     }
   ></div>
 );
-export const ViewMoreIcon = ({ active, onChange }: ViewMoreIconProps) => {
+export const ViewMoreIcon = () => {
+  const {action, slide} = useContext(SidebarContext);
+  const {NONACTIVE} = sidebarState;
   return (
     <div
       onClick={() => {
-        if (active) onChange(-1);
-        else onChange(0);
+        if(slide === NONACTIVE)
+          action({type:'main'})
+        else 
+          action({type:'exit'})
       }}
       className={
         'flex flex-col gap-1 w-6 transition-all delay-300 lg:hidden ' +
-        (active && 'hover:rotate-180 ease-in-out')
+        (slide != NONACTIVE && 'hover:rotate-180 ease-in-out')
       }
     >
-      <Line className={active && 'rotate-45 translate-y-full'} />
-      <Line className={active && 'hidden'} />
-      <Line className={active && '-rotate-45 -translate-y-full'} />
+      <Line className={''+(slide != NONACTIVE && 'rotate-45 translate-y-full')} />
+      <Line className={''+(slide != NONACTIVE && 'hidden')} />
+      <Line className={''+(slide != NONACTIVE && '-rotate-45 -translate-y-full')} />
     </div>
   );
 };

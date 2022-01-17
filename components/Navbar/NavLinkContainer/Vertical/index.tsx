@@ -21,10 +21,11 @@ export const NavLinkContainerVertical = ({
   sidebarHandler,
 }: NavlinkContainerProps) => {
   const sidebarContext = useContext(SidebarContext);
+  
   return (
     <>
       <Transition
-        show={sidebarContext != sidebarState.NONACTIVE}
+        show={sidebarContext.slide !== sidebarState.NONACTIVE}
         enter="transition-translate-x duration-300"
         enterFrom="-translate-x-full"
         enterTo="translate-x-0"

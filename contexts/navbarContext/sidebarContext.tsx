@@ -3,7 +3,6 @@ import { initialState, sidebarReducer, sidebarState } from '../../functions/side
 
 interface SidebarProvideProps {
   children: ReactNode;
-
 }
 
 const sidebar:any = {

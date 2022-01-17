@@ -1,4 +1,3 @@
-import { ViewListIcon } from '@heroicons/react/solid';
 import { useState } from 'react';
 import { NavLinkContainerHorizontal } from './NavLinkContainer/Horizontal';
 import DropdownIcon from './NavLinkContainer/Horizontal/DropdownIcon';
@@ -10,7 +9,6 @@ export const Navbar = () => {
   const sidebarHandler = (number: number) => {
     setSidebar(number)
   }
-  const defaultSidebar = 0;
   const navLinks = [
     {
       title: 'Docs Home',

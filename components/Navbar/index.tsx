@@ -69,10 +69,7 @@ export const Navbar = () => {
             sidebarHandler={sidebarHandler}
           />
           <div className="flex items-center text-xl gap-2">
-            <ViewMoreIcon
-              active={sidebar != -1}
-              onChange={sidebarHandler}
-            />
+            <ViewMoreIcon />
             <a href="." className='flex gap-3 items-center'>
               <img className="ml-5 w-4/12" src="/unity_logo.svg" alt="" />
               <h1>Documentation</h1>

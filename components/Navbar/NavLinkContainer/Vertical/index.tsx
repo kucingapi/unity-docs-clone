@@ -21,6 +21,8 @@ export const NavLinkContainerVertical = ({
   sidebarHandler,
 }: NavlinkContainerProps) => {
   const sidebarContext = useContext(SidebarContext);
+  const {slide} = useContext(SidebarContext);
+  const {NONACTIVE} = sidebarState;
   
   return (
     <>
@@ -59,7 +61,7 @@ export const NavLinkContainerVertical = ({
         })}
       </Transition>
       <Transition
-        show={sidebar != -1}
+        show={slide != NONACTIVE}
         className="flex flex-col absolute gap-3 h-screen w-full z-0 bg-black opacity-40 top-20 right-0 p-1 px-3"
       />
     </>

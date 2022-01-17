@@ -20,10 +20,10 @@ export const ViewMoreIcon = () => {
   return (
     <div
       onClick={() => {
-        if(slide === NONACTIVE)
-          action({type:'main'})
-        else 
+        if(slide != NONACTIVE)
           action({type:'exit'})
+        else 
+          action({type:'main'})
       }}
       className={
         'flex flex-col gap-1 w-6 transition-all delay-300 lg:hidden ' +

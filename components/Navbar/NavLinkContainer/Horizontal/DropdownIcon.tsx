@@ -23,8 +23,8 @@ const MenuItem = ({title, children }: MenuItemProps) => (
     {({ active }) => (
       <div
           className={classNames(
-            active ? 'text-secondary fill-secondary' : 'text-white fill-white',
-            'flex px-4 py-2 text-sm font-medium transition-all ease-out delay-200 items-center gap-2'
+            active ? 'text-secondary fill-secondary underline' : 'text-white fill-white',
+            ' flex px-4 py-2 text-sm font-medium items-center gap-2'
           )}
       >
         <span className="w-6 flex items-center justify-center">{children}</span>

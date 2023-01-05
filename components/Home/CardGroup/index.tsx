@@ -24,7 +24,7 @@ export const CardGroup: FC<CardGroupProps> = ({
           </div>
           <div className="flex xs:flex-col xs:items-start xs:justify-start">
             <div className="ml-5 xs:ml-0">
-              <h3 className="text-h3 font-semibold">Getting Started</h3>
+              <h3 className="text-lg font-semibold">Getting Started</h3>
               <p className="text-xs text-gray-600 mt-2 w-9/12">
                 {started.description}
               </p>

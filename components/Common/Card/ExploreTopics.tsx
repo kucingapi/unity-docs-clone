@@ -9,8 +9,8 @@ export const ExploreTopics = () => {
   return (
     <div className="mt-4">
       <p className="text-xs text-gray-500 font-medium">EXPLORE TOPICS</p>
-      <div className="flex flex-wrap gap-x-3 gap-y-4">
-        {topics.map((value) => (
+      <div className="flex flex-wrap gap-x-3 gap-y-4 mt-3">
+        {topics?.map((value) => (
           <Tag>{value}</Tag>
         ))}
       </div>

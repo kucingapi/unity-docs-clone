@@ -1,4 +1,5 @@
 import { MainTitle } from '../components/Home/MainTitle';
+import { RealtimeSection } from '../components/Home/RealtimeSection';
 import { ScriptingSection } from '../components/Home/ScriptingSection';
 import { SideBar } from '../components/Home/SideBar';
 
@@ -12,6 +13,7 @@ export default function Home() {
         >
           <MainTitle />
           <ScriptingSection />
+          <RealtimeSection />
         </article>
         <div className="w-3/12">
           <SideBar />

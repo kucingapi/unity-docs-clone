@@ -4,11 +4,9 @@ import { CardGhostButton } from '../../Common/Card/CardGhostButton';
 
 export const CardSection: FC = () => {
   return (
-    <div className="flex flex-col gap-12 mt-11">
-      <div className="flex lg:flex-row flex-col gap-8">
-        <DummyCard />
-        <DummyCard />
-      </div>
+    <div className="flex lg:flex-row flex-col gap-8 lg:gap-1 mt-8">
+      <DummyCard />
+      <DummyCard />
       <DummyCard />
     </div>
   );

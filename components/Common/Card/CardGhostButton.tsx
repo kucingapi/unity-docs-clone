@@ -23,7 +23,11 @@ export const CardGhostButton: FC<CardProps> = ({
       value={{ title, description, className, ghostButton }}
     >
       <Card>
-        <ButtonGhost>Visual Life</ButtonGhost>
+        <div className='mt-4'>
+          {ghostButton.map((value) => (
+            <ButtonGhost>{value}</ButtonGhost>
+          ))}
+        </div>
       </Card>
     </CardContext.Provider>
   );

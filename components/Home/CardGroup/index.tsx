@@ -4,13 +4,14 @@ import Star from '../../../public/star.svg';
 interface CardGroupProps {
   title: string;
   description: string;
-  started: boolean;
+  started?: { description: string; link: string; linkText: string };
 }
 
 export const CardGroup: FC<CardGroupProps> = ({
   title,
   description,
   started,
+  children,
 }) => {
   return (
     <div className="mt-4 pt-4 border-t-2 border-gray-300">
@@ -41,6 +42,7 @@ export const CardGroup: FC<CardGroupProps> = ({
           </div>
         </div>
       )}
+      {children}
     </div>
   );
 };

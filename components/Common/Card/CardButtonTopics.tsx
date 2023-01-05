@@ -19,7 +19,7 @@ export const CardButtonTopics: FC<CardProps> = ({
   return (
     <CardContext.Provider value={{ title, description, className }}>
       <Card>
-        <ButtonDefault>Read More →</ButtonDefault>
+        <ButtonDefault className='mt-6'>Read More →</ButtonDefault>
       </Card>
     </CardContext.Provider>
   );

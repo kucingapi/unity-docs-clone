@@ -2,9 +2,9 @@ import React, { FC, useContext } from 'react';
 import { CardTitle } from './CardTitle';
 import { CardContext } from '../../../contexts/Card';
 
-export const Card: FC = ({children}) => {
+export const Card: FC = ({ children }) => {
   const cardData = useContext(CardContext);
-  const { title, description, className } = cardData;
+  const { className } = cardData;
 
   return (
     <div className={`w-full ${className}`}>

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Card } from '.';
 import { CardContext } from '../../../contexts/Card';
+import { ButtonDefault } from '../ButtonDefault';
 
 interface CardProps {
   title: string;
@@ -17,7 +18,9 @@ export const CardButtonTopics: FC<CardProps> = ({
 }) => {
   return (
     <CardContext.Provider value={{ title, description, className }}>
-      <Card></Card>
+      <Card>
+        <ButtonDefault>Read More →</ButtonDefault>
+      </Card>
     </CardContext.Provider>
   );
 };

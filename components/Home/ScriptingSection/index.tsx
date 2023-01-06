@@ -1,8 +1,5 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { CardGroup } from '../CardGroup';
-import { Card } from '../../Common/Card';
-import { CardTitle } from '../../Common/Card/CardTitle';
-import { CardButtonTopics } from '../../Common/Card/CardButtonTopics';
 import { CardSection } from './CardSection';
 
 export const ScriptingSection: FC = () => {

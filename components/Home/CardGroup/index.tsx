@@ -14,7 +14,7 @@ export const CardGroup: FC<CardGroupProps> = ({
   children,
 }) => {
   return (
-    <div className="mt-4 pt-4 border-t-2 border-gray-300">
+    <div className="mt-6 pb-9 pt-4 border-t-2 border-gray-300">
       <div className="text-h2 font-semibold">{title}</div>
       <div className="text-h3">{description}</div>
       {started && (

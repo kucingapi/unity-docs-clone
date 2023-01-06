@@ -1,5 +1,4 @@
 import { Transition } from '@headlessui/react';
-import { log } from 'console';
 import { useContext } from 'react';
 import {
   SidebarContext,

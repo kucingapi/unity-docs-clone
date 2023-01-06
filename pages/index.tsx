@@ -47,7 +47,7 @@ export default function Home() {
             <PremiumSection />
           </InView>
         </article>
-        <div className="lg:w-3/12 p-2">
+        <div className="lg:w-3/12 p-2 -z-10 relative">
           <SideBar activeList={activeComponent}  />
         </div>
       </main>

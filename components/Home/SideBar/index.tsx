@@ -11,7 +11,6 @@ export const SideBar: FC<SidebarProps> = ({ activeList }) => {
     'Unity Gaming Services',
     'Premium Runtimes',
   ];
-  console.log(activeList);
 
   return (
     <div className='sticky top-28 hidden lg:block'>

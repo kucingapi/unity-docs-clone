@@ -4,7 +4,6 @@ import { ButtonLinkDropdown } from '../Vertical/ButtonLinkDropdown';
 import DropdownIcon from './DropdownIcon';
 import { NavLink } from './NavLink';
 import { NavLinkDropdown } from './NavLinkDropdown';
-import { SidebarSlide } from '../Vertical/SidebarSlide';
 interface NavlinkContainerProps {
   navLinks: Array<Object>;
   active: number;

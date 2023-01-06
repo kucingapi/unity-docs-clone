@@ -1,4 +1,3 @@
-import { log } from 'console';
 import { useContext } from 'react';
 import { SidebarContext } from '../../../../contexts/navbarContext/sidebarContext';
 import { sidebarState } from '../../../../functions/sidebarReducer/sidebarReducer';
